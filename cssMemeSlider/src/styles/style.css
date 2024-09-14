@@ -1,0 +1,40 @@
+.slider-container {
+    position: relative;
+    width: 94%;
+    margin: 3% auto 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-radio {
+    display: flex;
+    margin-top: 3%;
+    order: 2;
+}
+  
+.radio-button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
