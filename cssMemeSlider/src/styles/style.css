@@ -1,0 +1,142 @@
+body {
+    background-color: #646464a2;
+}
+
+input {
+    visibility: hidden;
+    position: absolute;
+}
+
+label span {
+    display: block;
+}
+
+.control {
+    display: flex;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 65%;
+    margin: 3% auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+  
+.slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-description-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.decsription-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.pagination {
+    display: flex;
+    cursor: pointer;
+    margin: 0 0;
+}
+
+.pagination-circle {
+    cursor: pointer;
+    transition: all .4s ease;
+    display: flex;
+}
+
+.pagination-circle-button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.15em solid rgb(120, 140, 255);
+    background-color: rgb(120, 140, 255);
+    cursor: pointer;
+    margin: 0.25rem;
+}
+
+.pagination-circle:hover .pagination-circle-button {
+    background: #fafafa;
+    border-color: #fafafa;
+}
+
+#rad1:checked~.control .pagination label:nth-of-type(1) .pagination-circle-button,
+#rad2:checked~.control .pagination label:nth-of-type(2) .pagination-circle-button,
+#rad3:checked~.control .pagination label:nth-of-type(3) .pagination-circle-button,
+#rad4:checked~.control .pagination label:nth-of-type(4) .pagination-circle-button {
+    background: none;
+}
+
+#rad1:checked~.slider-wrapper {
+    transform: translateX(0%);
+}
+
+#rad2:checked~.slider-wrapper {
+    transform: translateX(-100%);
+}
+
+#rad3:checked~.slider-wrapper {
+    transform: translateX(-200%);
+}
+
+#rad4:checked~.slider-wrapper {
+    transform: translateX(-300%);
+}
+
+
+#rad1:checked~.control .slider-description-wrapper .first-span{
+    margin-left: 0;
+}
+
+#rad2:checked~.control .slider-description-wrapper .first-span{
+    margin-left: -100%;
+}
+
+#rad3:checked~.control .slider-description-wrapper .first-span{
+    margin-left: -200%;
+}
+
+#rad4:checked~.control .slider-description-wrapper .first-span{
+    margin-left: -300%;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 90%;
+    }
+    .control {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .slider-description-wrapper {
+        order: 1;
+    }
+}
