@@ -18,14 +18,10 @@ label span {
 .pagination {
     display: flex;
     cursor: pointer;
-    width: 7rem;
-    padding: 0.25rem;
     margin: 0 0;
 }
 
 .pagination-circle {
-    height: 2.25rem;
-    width: 2.25rem;
     cursor: pointer;
     transition: all .4s ease;
     display: flex;
@@ -38,7 +34,7 @@ label span {
     border: 0.15em solid rgb(120, 140, 255);
     background-color: rgb(120, 140, 255);
     cursor: pointer;
-    margin-left: 0.5rem;
+    margin: 0.25rem;
 }
 
 .pagination-circle:hover .pagination-circle-button {
@@ -53,6 +49,7 @@ label span {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .slider-wrapper {
@@ -100,7 +97,7 @@ label span {
     overflow: hidden;
     transition: all 0.5s ease-in-out;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.2em;
 }
 
@@ -142,4 +139,15 @@ label span {
 
 #rad4:checked~.control .slider-description-wrapper .first-span{
     margin-left: -300%;
+}
+
+@media (max-width: 768px) {
+    .control {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .slider-description-wrapper {
+        order: 1;
+    }
 }
