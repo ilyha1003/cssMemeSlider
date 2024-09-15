@@ -9,12 +9,11 @@
 </head>
 <body>
     <div class="slider-container">
-        <div class="slider-radio">
-            <input type="radio" class="radio-button" name="slider" value="1" checked>
-            <input type="radio" class="radio-button" name="slider" value="2">
-            <input type="radio" class="radio-button" name="slider" value="3">
-            <input type="radio" class="radio-button" name="slider" value="4">
-        </div>
+        <input type="radio" name="rad" id="rad1" checked>
+        <input type="radio" name="rad" id="rad2">
+        <input type="radio" name="rad" id="rad3">
+        <input type="radio" name="rad" id="rad4">
+        
         <ul class="slider-wrapper">
             <li class="slide">
                 <img src="./src/img/42b470c54225caa78f416fe075eb2ecc_250x0_650.365.0.0.jpg" alt="photo">
@@ -29,6 +28,32 @@
                 <img src="./src/img/смех-джеймсона.jpg" alt="photo">
             </li>
         </ul>
+
+        <div class="control">
+            <ul class="slider-description-wrapper">
+                <li class="decsription-slide first-span">Think about it!</li>
+                <li class="decsription-slide">I'm coming for you!</li>
+                <li class="decsription-slide">Strength, confidence, originality!</li>
+                <li class="decsription-slide">When a woman doesn't understand why 40 + 40 = 80</li>
+            </ul>
+
+            <div class="pagination">
+                <label for="rad1" class="pagination-circle">
+                    <span class="pagination-circle-button"></span>
+                </label>
+                <label for="rad2" class="pagination-circle">
+                    <span class="pagination-circle-button"></span>
+                </label>
+                <label for="rad3" class="pagination-circle">
+                    <span class="pagination-circle-button"></span>
+                </label>
+                <label for="rad4" class="pagination-circle">
+                    <span class="pagination-circle-button"></span>
+                </label>
+            </div>
+        </div>
+
+        
     </div>
 </body>
 </html>

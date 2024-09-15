@@ -1,3 +1,51 @@
+body {
+    background-color: #646464a2;
+}
+
+input {
+    visibility: hidden;
+    position: absolute;
+}
+
+label span {
+    display: block;
+}
+
+.control {
+    display: flex;
+}
+
+.pagination {
+    display: flex;
+    cursor: pointer;
+    width: 7rem;
+    padding: 0.25rem;
+    margin: 0 0;
+}
+
+.pagination-circle {
+    height: 2.25rem;
+    width: 2.25rem;
+    cursor: pointer;
+    transition: all .4s ease;
+    display: flex;
+}
+
+.pagination-circle-button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.15em solid rgb(120, 140, 255);
+    background-color: rgb(120, 140, 255);
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.pagination-circle:hover .pagination-circle-button {
+    background: #fafafa;
+    border-color: #fafafa;
+}
+
 .slider-container {
     position: relative;
     width: 94%;
@@ -9,7 +57,7 @@
 
 .slider-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
   
 .slide {
@@ -37,4 +85,61 @@
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
+}
+
+.slider-description-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.decsription-slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+#rad1:checked~.control .pagination label:nth-of-type(1) .pagination-circle-button,
+#rad2:checked~.control .pagination label:nth-of-type(2) .pagination-circle-button,
+#rad3:checked~.control .pagination label:nth-of-type(3) .pagination-circle-button,
+#rad4:checked~.control .pagination label:nth-of-type(4) .pagination-circle-button {
+    background: none;
+}
+
+#rad1:checked~.slider-wrapper {
+    transform: translateX(0%);
+}
+
+#rad2:checked~.slider-wrapper {
+    transform: translateX(-100%);
+}
+
+#rad3:checked~.slider-wrapper {
+    transform: translateX(-200%);
+}
+
+#rad4:checked~.slider-wrapper {
+    transform: translateX(-300%);
+}
+
+
+#rad1:checked~.control .slider-description-wrapper .first-span{
+    margin-left: 0;
+}
+
+#rad2:checked~.control .slider-description-wrapper .first-span{
+    margin-left: -100%;
+}
+
+#rad3:checked~.control .slider-description-wrapper .first-span{
+    margin-left: -200%;
+}
+
+#rad4:checked~.control .slider-description-wrapper .first-span{
+    margin-left: -300%;
 }
